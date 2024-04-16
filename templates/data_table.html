@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Welcome to the Prediction World</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100;
+            }
+            th, td {
+                padding: 10px; 
+                text-align: left; 
+                border-bottom: 1px solid #add;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Car predictions</h1>
+    <body>
+        <table>
+           <thead>
+                <tr><th>Car Name</th>
+                <th>year</th>
+                <th>Selling Price</th>
+                <th>KM Driven</th>
+                <th>Fuel</th>
+                <th>Transmission</th>
+                <th>Owner</th>
+                <th>Mileage</th>
+                <th>Seats</th></tr>
+            </thead>
+            <tbody>
+                {% for s in carpredictions%}
+            <tr><td>{{  s[0] }}
+            </td><td>{{ s[1] }}
+            </td><td>{{ s[2] }}
+            </td><td>{{ s[3] }}
+            </td><td>{{ s[4] }}
+            </td><td>{{ s[6] }}
+            </td><td>{{ s[7] }}
+            </td><td>{{ s[8] }}
+            </td><td>{{ s[11] }}</td></tr>
+                {% endfor %}    
+            </tbody>
+        </table>
+    </body>
+</html>
+
